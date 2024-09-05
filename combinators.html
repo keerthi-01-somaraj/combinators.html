@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>combinator selectors</title>
+    <style>
+        div p{
+                                
+            background-color: aqua; /* here style will be applicable to all the paragraphs in particular div tag
+                                        this is known as descendent selectors(we use space here)*/
+        }
+        div>h2{
+            background-color: rgb(182, 57, 144); /* here style will be applicable to only h2 in particular div tag, it will not
+            consider section tag althogh it is in div tag,line no.45 this is known as child selectors(we use '>'' here)*/
+        }
+
+        div+h3{
+            background-color: rgb(94, 42, 114); /* here style will be applicable to only h3 after div tag,
+             this is known as adjacent sibling selectors(we use '+'' here)*/
+        }
+
+        
+        div~h4{
+            background-color: rgb(4, 120, 124); /* here style will be applicable to only h4 outside div tag,
+             this is known as general sibling selectors(we use '~'' here)*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Web designing program</h1> <!---descendent selectors-->
+<div>
+    <p>Web designing is the process of planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience. User experience is central to the web designing process. Websites have an array of elements presented in ways that make them easy to navigate.</p>
+<article><p>Web designing is the process</p></article>
+</div>
+<p>Web designing is the process of planning, conceptualizing</p>
+
+<!---Child Selectors-->
+<h1>Hyderabad </h1>
+<h2>Capital city of Telangana</h2>
+<div>
+    <h2>Capital city </h2>
+    <section><h2>Capital city</h2></section>
+    <h2>Capital city </h2>
+     
+</div>
+<h2>Capital city of Telangana</h2>
+
+<!---Adjacent sibling Selectors-->
+<h3>ABC</h3>
+
+<DIV>
+    <h3>def</h3>
+
+</DIV>
+<h3>cba</h3>
+<DIV>
+    <h3>def</h3>
+</DIV>
+<h3>ABC</h3>
+
+
+<!---General sibling Selectors-->
+
+<h4>123</h4>
+<h4>123</h4><div>
+    <h4>123</h4>
+</div>
+<h4>123</h4>
+<h4>123</h4>
+<h4>123</h4>
+<h4>123</h4>
+<div>
+    <h4>123</h4>
+    <h4>123</h4>
+</div>
+<h4>123</h4>
+<h4>123</h4>
+<h4>123</h4>
+</body>
+</html>
